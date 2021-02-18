@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang = "es">
+	<head>
+		<title>TP Labo3: Cuestionario</title>
+		<link href ="disenio.css" rel = "stylesheet" type = "text/css"/>
+	</head>
+	
+	<body>
+		<div>
+			<img src ="logo_cuestionario.png" alt = "Logo del Cuestionario" class = "imgCuest"/>
+			<img src ="portada.png" alt = "portada del cuestionario" class = "imgCuest"/>
+			<h2>Sobre el cuestionario</h2>
+			<p id = "mensaje">Las preguntas son sobre temas relacionados a internet y sistemas operativos.
+			Al pulsar enviar se mostrara en pantalla la puntuación obtenida y se señalaran los aciertos y errores.<br>
+			
+			<form action ="noimporta" method = "post"  id = "formulario">
+				
+				<hr/>
+				
+				<!--Pregunta 1-->
+				<p class ="pregunta">1. ¿En que año se presento a Gmail con su version Beta?</p>
+				<input type="text" name = "p1" id = "op1"/><br>
+				
+				<hr/>
+				
+				<!--Pregunta 2-->
+				<p class ="pregunta">2. Para tener una casilla de e-mail se debe ir hasta la sucursal de correo más cercana y solicitar una cuenta. ¿Esto es verdadero o falso?</p>
+				<input type = "radio" name = "p2" value = "0" id ="op2"/>	<label for = "op2" id = "tag2">Verdadero</label><br>
+				<input type = "radio" name = "p2" value = "0" id ="op3"/>	<label for = "op3" id = "tag3">Falso</label><br>
+			
+				<hr/>
+				
+				<!--Pregunta 3-->
+				<p class ="pregunta">3. ¿Que puede hacer una persona en Youtube?</p>
+				<select name = "seleccionA" id = "selectA">
+				<option value = "0">...</option>
+				<option value = "1" id = "op4">Vender y Comprar articulos</option>
+				<option value = "2" id = "op5">Encontrar amigos o pareja </option>
+				<option value = "3" id = "op6">Ver y compartir videos</option>
+				</select>
+				
+				<hr/>
+				
+				<!--Pregunta 4-->
+				<p class ="pregunta">4. ¿Cuales de los siguientes logos pertenecen a aplicaciones de mensajeria?</p>
+				<img src = "img1.png" alt ="logo netflix" id = "tag7"/>	<input type = "checkbox" name = "p4" id = "op7"/>
+				<img src = "img2.png" alt = "logo skype" id = "tag8">	<input type = "checkbox" name = "p4" id = "op8"/>
+				<img src = "img3.png" alt = "logo whatsapp" id = "tag9">	<input type = "checkbox" name = "p4" id = "op9"/>
+		
+				<hr/>
+				
+				<!--Pregunta 5-->
+				<p class ="pregunta">5. ¿A que cliente web hace referencia la siguiente imagen?</p>
+				<img src = "navegador.png" alt ="zorro" id = "tagA"/><br>
+				<input type = "text" name = "p5" value = "M***ll* F*r**ox" id = "op10"/><br>
+				
+				<hr/>
+				
+				<!--Pregunta 6-->
+				<p class = "pregunta">6. ¿Cual de los siguientes nombres pertenecen a redes sociales?</p>
+				<input type = "radio" name = "p6" value = "0" id ="op11"/>	<label for = "op11" id = "tag11">Telegram</label><br>
+				<input type = "radio" name = "p6" value = "0" id ="op12"/>	<label for = "op12" id = "tag12">Wikipedia</label><br>
+				<input type = "radio" name = "p6" value = "0" id ="op13"/>	<label for = "op13" id = "tag13">Ninguno</label><br>
+				
+				<hr/>
+				
+				<!--Pregunta 7-->
+				<p class ="pregunta">7. ¿En que orden fueron lanzados las siguientes versiones de Windows?</p>
+				<select name = "seleccionB" id = "selectB">
+				<option value = "0">...</option>
+				<option value = "1" id = "op14">Windows Vista</option>
+				<option value = "2" id = "op15">Windows XP</option>
+				<option value = "3" id = "op16">Windows Millenium</option>
+				</select>
+				<select name = "seleccionC" id = "selectC">
+				<option value = "0">...</option>
+				<option value = "1" id = "op17">Windows Millenium</option>
+				<option value = "2" id = "op18">Windows Vista</option>
+				<option value = "3" id = "op19">Windows XP</option>
+				</select>
+				<select name = "seleccionD" id = "selectD">
+				<option value = "0">...</option>
+				<option value = "1" id = "op20">Windows XP</option>
+				<option value = "2" id = "op21">Windows Millenium</option>
+				<option value = "3" id = "op22">Windows Vista</option>
+				</select>
+				
+				<hr/>
+				
+				<!--Pregunta 8-->
+				<p class ="pregunta">8. ¿Que logos pertenecen a aplicaciones de Reproducción de musica via streaming?</p>
+				<img src = "imgA.png" alt ="logo Facebook" id = "tag23"/>	<input type = "checkbox" name = "p8" id = "op23"/>
+				<img src = "imgB.png" alt ="logo Mercadolibre" id = "tag24"/>	<input type = "checkbox" name = "p8" id = "op24"/>
+				<img src = "imgC.png" alt ="logo Spotify" id = "tag25"/>	<input type = "checkbox" name = "p8" id = "op25"/>
+				
+				<hr/>
+				
+				<input type = "button" value = "Enviar" id = "boton"/>
+				<a href = "index.html" id = "botonReintentar">Reintentar</a>
+			</form>
+				
+			<script>
+				"use strict"
+				
+				document.getElementById("boton").onclick = function()
+				{
+					var contador = 0;
+					document.getElementById("boton").style.display = "none";
+					document.getElementById("botonReintentar").style.display = "block";
+					
+					/*Pregunta 1*/
+					var anioIngresado = parseInt(document.getElementById("op1").value);
+					if(anioIngresado == 2004)
+					{
+						contador++;
+						document.getElementById("op1").style.background = "green";
+					}
+					else
+						document.getElementById("op1").style.background = "red";
+					
+					/*Pregunta 2*/
+					if(document.getElementById("op3").checked == true)
+					{
+						contador++;
+						document.getElementById("tag3").style.background = "green";
+					}
+					
+					if(document.getElementById("op2").checked == true)
+						document.getElementById("tag2").style.background = "red";
+		
+					/*Pregunta 3*/
+					if(document.getElementById("op6").selected == true)
+					{
+						contador++;
+						document.getElementById("selectA").style.background = "green";
+					}
+					else
+						document.getElementById("selectA").style.background = "red";
+					
+					/*Pregunta 4*/
+					if(document.getElementById("op8").checked == true)
+						document.getElementById("tag8").style.border = " 3px solid green";
+
+					if(document.getElementById("op9").checked == true)
+						document.getElementById("tag9").style.border = " 3px solid green";
+
+					if(document.getElementById("op7").checked == true)
+						document.getElementById("tag7").style.border = " 3px solid red";
+									
+					if(document.getElementById("op8").checked == true)
+						if(document.getElementById("op9").checked == true)
+							if(document.getElementById("op7").checked == false)
+								contador++;
+			
+					
+					/*Pregunta 5*/
+					var texto = document.getElementById("op10").value;
+					
+					if(texto == "Mozilla Firefox" || texto == "mozilla firefox")
+					{
+						contador++;
+						document.getElementById("op10").style.background = "green";
+					}
+					else
+					{
+						document.getElementById("op10").style.background = "red";
+					}
+								
+					/*pregunta 6*/
+					if(document.getElementById("op13").checked == true)
+					{
+						contador++;
+						document.getElementById("tag13").style.background = "green";
+					}
+					
+					if(document.getElementById("op11").checked == true)
+						document.getElementById("tag11").style.background = "red";
+		
+					if(document.getElementById("op12").checked == true)
+						document.getElementById("tag12").style.background = "red";
+						
+					/*Pregunta 7*/
+					if(document.getElementById("op16").selected == true)
+					{
+						if(document.getElementById("op19").selected == true)
+						{
+							if(document.getElementById("op22").selected == true)
+							{
+								contador++;
+								document.getElementById("selectB").style.background = "green";
+								document.getElementById("selectC").style.background = "green";
+								document.getElementById("selectD").style.background = "green";
+							}
+							else
+							{
+								document.getElementById("selectB").style.background = "red";
+								document.getElementById("selectC").style.background = "red";
+								document.getElementById("selectD").style.background = "red";
+							}
+						}
+						else
+							{
+								document.getElementById("selectB").style.background = "red";
+								document.getElementById("selectC").style.background = "red";
+								document.getElementById("selectD").style.background = "red";
+							}
+					}
+					else
+							{
+								document.getElementById("selectB").style.background = "red";
+								document.getElementById("selectC").style.background = "red";
+								document.getElementById("selectD").style.background = "red";
+							}
+					
+					/*Pregunta 8*/
+					if(document.getElementById("op25").checked == true)
+						document.getElementById("tag25").style.border = "3px solid green";
+					
+					if(document.getElementById("op23").checked == true)
+						document.getElementById("tag23").style.border = "3px solid red";
+			
+						
+					if(document.getElementById("op24").checked == true)
+						document.getElementById("tag24").style.border = "3px solid red";
+						
+						if(document.getElementById("op25").checked == true)
+							if(document.getElementById("op23").checked == false)
+								if(document.getElementById("op24").checked == false)
+									contador++;
+								
+					
+					alert("Tu puntuación es de " + contador + " de 8");
+					contador = 0;
+					return true;
+				}
+							
+			</script>
+			
+			</div>
+		
+		<footer><p>Trabajo Integrador hecho por <b>Marco Romero</b> para la materia <b>Laboratorio 3.</b></p></footer>
+		
+	</body>
+	
+</html>
