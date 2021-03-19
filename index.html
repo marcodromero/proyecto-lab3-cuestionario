@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang = "es">
-	<head>
+	<head>		
+		<meta charset="UTF-8">
 		<title>TP Labo3: Cuestionario</title>
 		<link href ="disenio.css" rel = "stylesheet" type = "text/css"/>
 	</head>
@@ -11,27 +12,27 @@
 			<img src ="portada.png" alt = "portada del cuestionario" class = "imgCuest"/>
 			<h2>Sobre el cuestionario</h2>
 			<p id = "mensaje">Las preguntas son sobre temas relacionados a internet y sistemas operativos.
-			Al pulsar enviar se mostrara en pantalla la puntuación obtenida y se señalaran los aciertos y errores.<br>
+			Al pulsar enviar se mostrara en pantalla la puntuaciÃ³n obtenida y se seÃ±alaran los aciertos y errores.<br>
 			
 			<form action ="noimporta" method = "post"  id = "formulario">
 				
 				<hr/>
 				
 				<!--Pregunta 1-->
-				<p class ="pregunta">1. ¿En que año se presento a Gmail con su version Beta?</p>
+				<p class ="pregunta">1. Â¿En que aÃ±o se presento a Gmail con su version Beta?</p>
 				<input type="text" name = "p1" id = "op1"/><br>
 				
 				<hr/>
 				
 				<!--Pregunta 2-->
-				<p class ="pregunta">2. Para tener una casilla de e-mail se debe ir hasta la sucursal de correo más cercana y solicitar una cuenta. ¿Esto es verdadero o falso?</p>
+				<p class ="pregunta">2. Para tener una casilla de e-mail se debe ir hasta la sucursal de correo mÃ¡s cercana y solicitar una cuenta. Â¿Esto es verdadero o falso?</p>
 				<input type = "radio" name = "p2" value = "0" id ="op2"/>	<label for = "op2" id = "tag2">Verdadero</label><br>
 				<input type = "radio" name = "p2" value = "0" id ="op3"/>	<label for = "op3" id = "tag3">Falso</label><br>
 			
 				<hr/>
 				
 				<!--Pregunta 3-->
-				<p class ="pregunta">3. ¿Que puede hacer una persona en Youtube?</p>
+				<p class ="pregunta">3. Â¿Que puede hacer una persona en Youtube?</p>
 				<select name = "seleccionA" id = "selectA">
 				<option value = "0">...</option>
 				<option value = "1" id = "op4">Vender y Comprar articulos</option>
@@ -42,7 +43,7 @@
 				<hr/>
 				
 				<!--Pregunta 4-->
-				<p class ="pregunta">4. ¿Cuales de los siguientes logos pertenecen a aplicaciones de mensajeria?</p>
+				<p class ="pregunta">4. Â¿Cuales de los siguientes logos pertenecen a aplicaciones de mensajeria?</p>
 				<img src = "img1.png" alt ="logo netflix" id = "tag7"/>	<input type = "checkbox" name = "p4" id = "op7"/>
 				<img src = "img2.png" alt = "logo skype" id = "tag8">	<input type = "checkbox" name = "p4" id = "op8"/>
 				<img src = "img3.png" alt = "logo whatsapp" id = "tag9">	<input type = "checkbox" name = "p4" id = "op9"/>
@@ -50,14 +51,14 @@
 				<hr/>
 				
 				<!--Pregunta 5-->
-				<p class ="pregunta">5. ¿A que cliente web hace referencia la siguiente imagen?</p>
+				<p class ="pregunta">5. Â¿A que cliente web hace referencia la siguiente imagen?</p>
 				<img src = "navegador.png" alt ="zorro" id = "tagA"/><br>
 				<input type = "text" name = "p5" value = "M***ll* F*r**ox" id = "op10"/><br>
 				
 				<hr/>
 				
 				<!--Pregunta 6-->
-				<p class = "pregunta">6. ¿Cual de los siguientes nombres pertenecen a redes sociales?</p>
+				<p class = "pregunta">6. Â¿Cual de los siguientes nombres pertenecen a redes sociales?</p>
 				<input type = "radio" name = "p6" value = "0" id ="op11"/>	<label for = "op11" id = "tag11">Telegram</label><br>
 				<input type = "radio" name = "p6" value = "0" id ="op12"/>	<label for = "op12" id = "tag12">Wikipedia</label><br>
 				<input type = "radio" name = "p6" value = "0" id ="op13"/>	<label for = "op13" id = "tag13">Ninguno</label><br>
@@ -65,7 +66,7 @@
 				<hr/>
 				
 				<!--Pregunta 7-->
-				<p class ="pregunta">7. ¿En que orden fueron lanzados las siguientes versiones de Windows?</p>
+				<p class ="pregunta">7. Â¿En que orden fueron lanzados las siguientes versiones de Windows?</p>
 				<select name = "seleccionB" id = "selectB">
 				<option value = "0">...</option>
 				<option value = "1" id = "op14">Windows Vista</option>
@@ -88,7 +89,7 @@
 				<hr/>
 				
 				<!--Pregunta 8-->
-				<p class ="pregunta">8. ¿Que logos pertenecen a aplicaciones de Reproducción de musica via streaming?</p>
+				<p class ="pregunta">8. Â¿Que logos pertenecen a aplicaciones de ReproducciÃ³n de musica via streaming?</p>
 				<img src = "imgA.png" alt ="logo Facebook" id = "tag23"/>	<input type = "checkbox" name = "p8" id = "op23"/>
 				<img src = "imgB.png" alt ="logo Mercadolibre" id = "tag24"/>	<input type = "checkbox" name = "p8" id = "op24"/>
 				<img src = "imgC.png" alt ="logo Spotify" id = "tag25"/>	<input type = "checkbox" name = "p8" id = "op25"/>
@@ -229,7 +230,7 @@
 									contador++;
 								
 					
-					alert("Tu puntuación es de " + contador + " de 8");
+					alert("Tu puntuaciÃ³n es de " + contador + " de 8");
 					contador = 0;
 					return true;
 				}
